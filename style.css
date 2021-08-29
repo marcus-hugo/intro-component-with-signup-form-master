@@ -1,4 +1,27 @@
 
+/* Variables */
+
+:root {
+    /* Primary Colors */
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    /* Accent Color */
+    --blue: hsl(248, 32%, 49%);
+    /* Neutral Colors */
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    /* Font Weights */
+    --regular: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Footer */
 .attribution { 
     font-size: 11px; 
