@@ -17,12 +17,88 @@
     --bold: 700;
 }
 
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: url(images/bg-intro-mobile.png);
+    background-color: var(--red);
+    color: white;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: var(--bold);
+    padding: 5.625rem 3.75rem 1.25rem 3.75rem;
+}
+
+.see-how {
+    padding: 0 1.875rem 3.75rem 1.875rem; 
+}
+
+.trial {
+    background-color: var(--blue);
+    padding:1.25rem 3.75rem 1.25rem 3.75rem;
+    margin: 0 1.56rem 1.56rem 1.56rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.2));
+}
+
+.try-it {
+    font-weight: var(--semi-bold);
+}
+
+.form-container {
+    background-color: white;
+    margin: 0 1.56rem 0 1.56rem;
+    padding-top: 1.56rem;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.2));
+}
+
+input {
+    border: 1px solid lightgrey;
+    padding: 1rem 4.375rem 1rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+.claim-button {
+    background-color: var(--green);
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    padding: 1rem 2.5rem;
+    border-radius: 0.3rem;
+    border-top: 1px solid hsl(154, 68%, 44%);
+    border-left: 1px solid hsl(154, 68%, 44%);
+    border-right: 1px solid hsl(154, 68%, 44%);
+    border-bottom: 4px solid hsl(154, 68%, 44%);
+}
+
+.by-clicking {
+    color: var(--grayish-blue);
+    font-size: 11px;
+    padding: 10px 46px 25px 46px;
+}
+
+.terms {
+    color: var(--red);
 }
 
 /* Footer */
+footer {
+    padding: 30px 0  20px 0;
+}
 .attribution { 
     font-size: 11px; 
     text-align: center; 
