@@ -33,23 +33,24 @@ body {
     background-color: var(--red);
     color: white;
     height: 100vh;
+    min-width: 375px;
 }
 
 h1 {
     font-size: 1.7rem;
     font-weight: var(--bold);
-    padding: 5.625rem 3.75rem 1.25rem 3.75rem;
+    padding: 90px 60px 20px 60px;
 }
 
 .see-how {
-    padding: 0 1.875rem 3.75rem 1.875rem; 
+    padding: 0 30px 60px 30px; 
 }
 
 .trial {
     background-color: var(--blue);
-    padding:1.25rem 3.75rem 1.25rem 3.75rem;
-    margin: 0 1.56rem 1.56rem 1.56rem;
-    border-radius: 0.5rem;
+    padding: 20px 60px 20px 60px;
+    margin: 0 25px 25px 25px;
+    border-radius: 8px;
     filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.2));
 }
 
@@ -59,30 +60,47 @@ h1 {
 
 .form-container {
     background-color: white;
-    margin: 0 1.56rem 0 1.56rem;
-    padding-top: 1.56rem;
-    border-radius: 0.5rem;
+    margin: 0 25px 0 25px;
+    border-radius: 8px;
     filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.2));
+}
+
+form {
+    padding-top: 25px;
+    min-width: 325px;
 }
 
 input {
     border: 1px solid lightgrey;
-    padding: 1rem 4.375rem 1rem 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.3rem;
+    padding: 16px 0 16px 30px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    width: 80%;
+    outline-color: var(--grayish-blue);
 }
+
+input:focus { 
+    outline: none !important;
+    border: 1px solid var(--dark-blue);
+    }
 
 .claim-button {
     background-color: var(--green);
     text-transform: uppercase;
     color: white;
     font-size: 16px;
-    padding: 1rem 2.5rem;
+    padding: 16px 0;
+    width: 85%;
     border-radius: 0.3rem;
     border-top: 1px solid hsl(154, 68%, 44%);
     border-left: 1px solid hsl(154, 68%, 44%);
     border-right: 1px solid hsl(154, 68%, 44%);
     border-bottom: 4px solid hsl(154, 68%, 44%);
+}
+
+.claim-button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
 }
 
 .by-clicking {
@@ -105,4 +123,42 @@ footer {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 800px) {
+    body {
+        background: url(images/bg-intro-desktop.png);
+        background-color: var(--red);
+    }
+    main {
+       display: grid;
+       grid-template-columns: 50% 50%;
+       grid-template-rows: 1fr;
+       height: 90vh;
+    }
+    .left {
+        grid-area: 1/1/2/2;
+        align-self: center;
+        text-align: left;
+    }
+    h1, .see-how {
+        padding: 0;
+        margin-left: 120px;
+    }
+    h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+    .right {
+        grid-area: 1/2/2/3;
+        align-self: center;
+        justify-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form, .trial {
+        max-width: 525px;
+    }
 }
